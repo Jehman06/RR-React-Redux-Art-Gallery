@@ -3,7 +3,9 @@ import { useEffect } from 'react';
 import { useSelector, useDispatch, connect } from 'react-redux';
 import { fetchData, nextImage, prevImage, setArtId, reset } from './features/dataSlice';
 
-const mapStateProps = state => ({ artId: state.data.artId });
+const mapStateProps = (state) => ({
+  artId: state.data.artId
+});
 
 function App({ artId }) {
   const dispatch = useDispatch();
